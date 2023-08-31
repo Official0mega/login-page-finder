@@ -28,6 +28,7 @@ class FindLoginPage():
                 break
             try:
                 full_link = self.domain + '/' + sub_link.strip()
+                print("Requesting URL:", full_link)  # Add this line
                 request_link = Request(full_link, headers=UA)
                 self.sub_link_counter += 1
                 stdout.write("\r" + "Nr. of checked links: %s/%s" % (self.sub_link_counter, self.number_of_sub_links))
